@@ -4,9 +4,10 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Pattie Giraldo.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -29,6 +30,24 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
+    # Test 1
+    expected = .13416
+    answer = sum_cosines(3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2
+    expected = 0
+    answer = sum_cosines(0)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3
+    expected = 0
+    answer = sum_cosines(0)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
 
 def sum_cosines(n):
     """
@@ -49,6 +68,11 @@ def sum_cosines(n):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    total = math.cos(0)
+    for k in range(n):
+        total = total + (math.cos(k+1))
+
+    return total
 
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
@@ -64,6 +88,24 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    expected = 11.854408
+    answer = sum_square_roots(5)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2
+    expected = 0
+    answer = sum_square_roots(0)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3
+    expected = 0
+    answer = sum_square_roots(0)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def sum_square_roots(n):
@@ -88,6 +130,11 @@ def sum_square_roots(n):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    total = math.sqrt(n*2)
+    for k in range(n):
+        total = total + (math.sqrt(2*k))
+
+    return total
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
