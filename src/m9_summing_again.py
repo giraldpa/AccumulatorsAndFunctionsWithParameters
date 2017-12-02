@@ -29,21 +29,21 @@ def run_test_sum_powers():
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
 
-# Test 1:
-    expected = 55
-    answer = sum_powers(,)
+    # Test 1:
+    expected = 3.80826
+    answer = sum_powers(5, -0.3)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 91
-    answer = sum_powers(,)
+    expected = 144.45655
+    answer = sum_powers(100, 0.1)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 3:
-    expected = 333833500
-    answer = sum_powers(,)
+    expected = 0
+    answer = sum_powers(0,0)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
@@ -66,8 +66,12 @@ def sum_powers(n, p):
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(n):
+        total = total + ((k+1) ** p)
 
-    
+    return total
+
 
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
@@ -83,6 +87,24 @@ def run_test_sum_powers_in_range():
     print('--------------------------------------------------')
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
+
+    # Test 1:
+    expected = 142.384776
+    answer = sum_powers_in_range(3, 100 , 0.1)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 2989
+    answer = sum_powers_in_range(4, 10, 3)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 333833500
+    answer = sum_powers_in_range(0, 0, 0)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def sum_powers_in_range(m, n, p):
@@ -105,6 +127,10 @@ def sum_powers_in_range(m, n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    total = 0
+    for k in range((n+1) -m):
+        total = total + ((k + m) ** p)
+    return total
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
