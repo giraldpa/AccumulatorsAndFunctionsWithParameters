@@ -114,7 +114,7 @@ def better_draw_circles(n):
     window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
-# TODO: 3.
+# DONE: 3.
 #   In the previous exercise, you made a MORE POWERFUL version
 #   of draw_circles by introducing a PARAMETER for the amount by
 #   which the radii of the concentric circles increase.
@@ -146,6 +146,7 @@ def better_draw_circles(n):
 def run_test_even_better_draw_circles():
 
   even_better_draw_circles(5, 'pink', 7)
+  even_better_draw_circles(6, "blue", 2)
 
 
 def even_better_draw_circles(n, color, thickness):
@@ -155,7 +156,7 @@ def even_better_draw_circles(n, color, thickness):
     for k in range(10):
         circle = rg.Circle(center, n + n*k)
         circle.outline_thickness = thickness + 1
-        circle.outline_color =  color
+        circle.outline_color = color
         circle.attach_to(window)
         window.render(0.07)  # Pauses for 0.05 seconds after rendering.
 

@@ -42,8 +42,8 @@ def run_test_sum_powers():
     print('       actual:  ', answer)
 
     # Test 3:
-    expected = 0
-    answer = sum_powers(0,0)
+    expected = 22.20312592151
+    answer = sum_powers(8, 0.7)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
@@ -101,8 +101,8 @@ def run_test_sum_powers_in_range():
     print('       actual:  ', answer)
 
     # Test 3:
-    expected = 333833500
-    answer = sum_powers_in_range(0, 0, 0)
+    expected = 55
+    answer = sum_powers_in_range(1, 5, 2)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
